@@ -1,3 +1,62 @@
+buildscript {
+    ext {
+        fabric_gradle_plugin_version = '1.29.0'
+        google_play_core_version = '1.10.2'
+        appcompat_version = '1.1.0'
+        exifinterface_version = '1.0.0'
+        cardview_version = '1.0.0'
+        gridlayout_version = '1.0.0'
+        constraintlayout_version = '1.1.3'
+        lifecycle_version = '2.4.0'
+        room_version = '2.4.0'
+        ktx_version = '1.6.0'
+        activity_ktx_version = '1.0.0'
+        fragment_ktx_version = '1.1.0'
+        test_runner_version = '1.1.1'
+        test_junit_version = '1.1.0'
+        material_version = '1.2.0'
+        oss_licenses_version = '17.0.0'
+        kotlin_coroutines_version = '1.6.0'
+        dagger_version = '2.35.1'
+        rxkotlin_version = '2.3.0'
+        rxandroid_version = '2.1.0'
+        rxlifecycle_version = '3.0.0'
+        firebase_core_version = '21.1.1'
+        firebase_crashlytics = '18.2.6'
+        firebase_messaging_version = '23.1.0'
+        crashlytics_version = '2.10.0'
+        retrofit_version = '2.5.0'
+        moshi_version = '1.8.0'
+        okhttp_version = '3.12.13'
+        glide_version = '4.8.0'
+        stetho_version = '1.5.0'
+        timber_version = '4.7.1'
+        android_state_version = '1.4.1'
+        facebook_version = '11.3.0'
+        adapter_delegate_version = '4.0.0'
+        circleimageview_version = '3.0.0'
+        photoview_version = '2.3.0'
+        roundedimageview_version = '2.3.0'
+        mp_android_chart_version = 'v3.0.3'
+        materialdatetimepicker_version = '4.1.0'
+        junit_version = '4.12'
+        android_core_testing_version = '1.1.1'
+        json_version = '20180813'
+        mockito_kotlin_version = '2.2.0'
+        truth_version = '0.42'
+        ktlint_version = '0.44.0'
+        hyperion_version = '0.9.34'
+        hyperion_chuck_version = '1.1.2'
+        hyperion_simple_item_version = '0.4.0'
+        groupie_version = '2.5.1'
+        collection_ktx_version = '1.0.0'
+        calendar_view_version = '0.3.1'
+//        leakcanary_version = '2.8'
+        okio_version = '2.2.2'
+        flexbox_version = '3.0.0'
+    }
+}
+
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
@@ -36,32 +95,147 @@ android {
 }
 
 dependencies {
-    implementation 'androidx.appcompat:appcompat:1.0.0'
-    implementation 'androidx.navigation:navigation-fragment-ktx:2.5.3'
-    implementation 'androidx.navigation:navigation-ui-ktx:2.5.3'
     // android
-    implementation "androidx.exifinterface:exifinterface:1.0.0"
-    implementation "androidx.cardview:cardview:1.0.0"
-    implementation "androidx.gridlayout:gridlayout:1.0.0"
-    implementation "androidx.activity:activity-ktx:1.0.0"
-    implementation "androidx.fragment:fragment-ktx:1.0.0"
-    implementation "com.google.android.material:material:1.0.0"
-    implementation "androidx.collection:collection-ktx:1.0.0"
+    implementation "com.google.android.play:core:$google_play_core_version"
+    implementation "androidx.appcompat:appcompat:$appcompat_version"
+    implementation "androidx.exifinterface:exifinterface:$exifinterface_version"
+    implementation "androidx.cardview:cardview:$cardview_version"
+    implementation "androidx.gridlayout:gridlayout:$gridlayout_version"
+    implementation "androidx.constraintlayout:constraintlayout:$constraintlayout_version"
+    implementation "androidx.lifecycle:lifecycle-runtime:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-service:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
+    implementation "androidx.room:room-runtime:$room_version"
+    implementation "androidx.core:core-ktx:$ktx_version"
+    implementation "androidx.activity:activity-ktx:$activity_ktx_version"
+    implementation "androidx.fragment:fragment-ktx:$fragment_ktx_version"
+    implementation "com.google.android.material:material:$material_version"
+    implementation "com.google.android.gms:play-services-oss-licenses:$oss_licenses_version"
+    implementation "androidx.collection:collection-ktx:$collection_ktx_version"
+
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+    kapt "androidx.lifecycle:lifecycle-compiler:$lifecycle_version"
+    kapt "androidx.room:room-compiler:$room_version"
+
     // kotlin
-    implementation "org.jetbrains.kotlin:kotlin-reflect:1.0.0"
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.0.0"
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.0.0"
-    // timber
-    implementation "com.jakewharton.timber:timber:1.0.0"
-    // text view
-    implementation "com.borjabravo:readmoretextview:1.0.0"
-    // dialog
-    implementation "com.wdullaer:materialdatetimepicker:1.0.0"
-    implementation "io.coil-kt:coil:0.9.5"
-    implementation 'androidx.core:core-ktx:1.0.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlin_coroutines_version"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$kotlin_coroutines_version"
+
+    // dagger
+    implementation "com.google.dagger:dagger:$dagger_version"
+    implementation "com.google.dagger:dagger-android:$dagger_version"
+    implementation "com.google.dagger:dagger-android-support:$dagger_version"
+    kapt "com.google.dagger:dagger-compiler:$dagger_version"
+    kapt "com.google.dagger:dagger-android-processor:$dagger_version"
+
+    // rx
+    implementation "io.reactivex.rxjava2:rxkotlin:$rxkotlin_version"
+    implementation "io.reactivex.rxjava2:rxandroid:$rxandroid_version"
+    implementation "com.trello.rxlifecycle3:rxlifecycle-kotlin:$rxlifecycle_version"
+    implementation "com.trello.rxlifecycle3:rxlifecycle-components:$rxlifecycle_version"
+
+    // firebase
+    implementation "com.google.firebase:firebase-core:$firebase_core_version"
+    implementation "com.google.firebase:firebase-messaging:$firebase_messaging_version"
+
+    // crashlytics
+    implementation "com.google.firebase:firebase-crashlytics:$firebase_crashlytics"
+
+    // retrofit
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-moshi:$retrofit_version"
+
+    // moshi
+    implementation "com.squareup.moshi:moshi:$moshi_version"
+    implementation "com.squareup.moshi:moshi-kotlin:$moshi_version"
+    implementation "com.squareup.moshi:moshi-adapters:$moshi_version"
+
     // okhttp
-    implementation "com.squareup.okhttp3:okhttp:3.0.0"
-    implementation "com.squareup.okhttp3:logging-interceptor:3.0.0"
+    implementation "com.squareup.okhttp3:okhttp:$okhttp_version"
+    implementation "com.squareup.okhttp3:logging-interceptor:$okhttp_version"
+
+    // glide
+    implementation "com.github.bumptech.glide:glide:$glide_version"
+    kapt "com.github.bumptech.glide:compiler:$glide_version"
+
+    // stetho
+    implementation "com.facebook.stetho:stetho:$stetho_version"
+    implementation "com.facebook.stetho:stetho-okhttp3:$stetho_version"
+
+    // timber
+    implementation "com.jakewharton.timber:timber:$timber_version"
+
+    // android state
+    implementation "com.evernote:android-state:$android_state_version"
+    kapt "com.evernote:android-state-processor:$android_state_version"
+
+    // amazon
+    implementation files('libs/login-with-amazon-sdk.jar')
+
+    // facebook
+    implementation "com.facebook.android:facebook-android-sdk:$facebook_version"
+
+    // recycler view
+    implementation "com.hannesdorfmann:adapterdelegates4:$adapter_delegate_version"
+
+    // image view
+    implementation "de.hdodenhof:circleimageview:$circleimageview_version"
+    implementation "com.github.chrisbanes:PhotoView:$photoview_version"
+    implementation "com.makeramen:roundedimageview:$roundedimageview_version"
+
+    // MPAndroidChart
+    implementation "com.github.PhilJay:MPAndroidChart:$mp_android_chart_version"
+
+    // dialog
+    implementation "com.wdullaer:materialdatetimepicker:$materialdatetimepicker_version"
+
+    // local unit test
+    testImplementation('org.threeten:threetenbp:1.3.7') {
+        exclude group: 'com.jakewharton.threetenabp', module: 'threetenabp'
+    }
+    testImplementation "junit:junit:$junit_version"
+    testImplementation "android.arch.core:core-testing:$android_core_testing_version"
+    testImplementation "org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version"
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$kotlin_coroutines_version"
+    testImplementation "com.google.truth:truth:$truth_version"
+    testImplementation "org.json:json:$json_version"
+    androidTestImplementation("org.mockito:mockito-android:4.9.0")
+    testImplementation "org.mockito:mockito-inline:4.9.0"
+    testImplementation "com.nhaarman.mockitokotlin2:mockito-kotlin:$mockito_kotlin_version"
+    testImplementation "com.squareup.okhttp3:mockwebserver:$okhttp_version"
+
+    // instrumented test
+    androidTestImplementation "androidx.test:runner:$test_runner_version"
+    androidTestImplementation "androidx.test.ext:junit:$test_junit_version"
+    androidTestImplementation "androidx.room:room-testing:$room_version"
+    androidTestImplementation "com.google.truth:truth:$truth_version"
+
+    // hyperion
+    debugImplementation "com.willowtreeapps.hyperion:hyperion-core:$hyperion_version"
+    releaseImplementation "com.willowtreeapps.hyperion:hyperion-core-no-op:$hyperion_version"
+    debugImplementation "com.willowtreeapps.hyperion:hyperion-core:$hyperion_version"
+    debugImplementation "com.github.takahirom:Hyperion-Simple-Item:$hyperion_simple_item_version"
+    debugImplementation "com.github.Commit451:Hyperion-Chuck:$hyperion_chuck_version"
+    debugImplementation "com.willowtreeapps.hyperion:hyperion-attr:$hyperion_version"
+    debugImplementation "com.willowtreeapps.hyperion:hyperion-crash:$hyperion_version"
+    debugImplementation "com.willowtreeapps.hyperion:hyperion-measurement:$hyperion_version"
+    debugImplementation "com.willowtreeapps.hyperion:hyperion-recorder:$hyperion_version"
+    debugImplementation "com.willowtreeapps.hyperion:hyperion-shared-preferences:$hyperion_version"
+    debugImplementation "com.willowtreeapps.hyperion:hyperion-timber:$hyperion_version"
+
+
+//   groupie recyclerview
+    implementation "com.xwray:groupie:$groupie_version"
+    implementation "com.xwray:groupie-kotlin-android-extensions:$groupie_version"
+    implementation "com.xwray:groupie-databinding:$groupie_version"
+
+    implementation "com.github.kizitonwose:CalendarView:$calendar_view_version"
+
+    // flexbox
+    implementation "com.google.android.flexbox:flexbox:$flexbox_version"
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "org.jetbrains.kotlin:kotlin-stdlib:1.0.0"
     implementation 'androidx.core:core-ktx:1.3.1'
