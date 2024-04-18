@@ -9,5 +9,10 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
-    open-pull-requests-limit: 20
+    commit-message:
+      prefix: "chore"
+      include: "scope"
     target-branch: "develop"
+    pull-request-branch-name:
+      separator: "_"
+    open-pull-requests-limit: 10
