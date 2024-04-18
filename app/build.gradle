@@ -17,7 +17,7 @@ buildscript {
         material_version = '1.2.0'
         oss_licenses_version = '17.0.0'
         kotlin_coroutines_version = '1.6.0'
-        dagger_version = '2.35.1'
+        dagger_version = '2.51.1'
         rxkotlin_version = '2.3.0'
         rxandroid_version = '2.1.0'
         rxlifecycle_version = '3.0.0'
