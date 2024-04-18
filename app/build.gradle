@@ -32,7 +32,7 @@ buildscript {
         stetho_version = '1.5.0'
         timber_version = '4.7.1'
         android_state_version = '1.4.1'
-        facebook_version = '11.3.0'
+        facebook_version = '17.0.0'
         adapter_delegate_version = '4.0.0'
         circleimageview_version = '3.0.0'
         photoview_version = '2.3.0'
