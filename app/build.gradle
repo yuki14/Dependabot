@@ -45,7 +45,7 @@ buildscript {
         mockito_kotlin_version = '2.2.0'
         truth_version = '0.42'
         ktlint_version = '0.44.0'
-        hyperion_version = '0.9.34'
+        hyperion_version = '0.9.38'
         hyperion_chuck_version = '1.1.2'
         hyperion_simple_item_version = '0.4.0'
         groupie_version = '2.5.1'
