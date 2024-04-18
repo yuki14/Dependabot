@@ -1,7 +1,7 @@
 buildscript {
     ext {
         fabric_gradle_plugin_version = '1.29.0'
-        google_play_core_version = '1.10.2'
+        google_play_core_version = '1.10.3'
         appcompat_version = '1.1.0'
         exifinterface_version = '1.0.0'
         cardview_version = '1.0.0'
