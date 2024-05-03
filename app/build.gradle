@@ -22,7 +22,7 @@ buildscript {
         rxandroid_version = '2.1.0'
         rxlifecycle_version = '3.0.0'
         firebase_core_version = '21.1.1'
-        firebase_crashlytics = '18.2.6'
+        firebase_crashlytics = '19.0.0'
         firebase_messaging_version = '23.1.0'
         crashlytics_version = '2.10.0'
         retrofit_version = '2.5.0'
